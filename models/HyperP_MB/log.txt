@@ -1,0 +1,311 @@
+DenseFuse_net(
+  (conv1): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+  (DB1): DenseBlock(
+    (denseblock): Sequential(
+      (0): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+      (1): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+      (2): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(48, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (conv1_1): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+  (DB2): DenseBlock(
+    (denseblock): Sequential(
+      (0): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+      (1): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+      (2): DenseConv2d(
+        (dense_conv): ConvLayer(
+          (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+          (conv2d): Conv2d(48, 16, kernel_size=(3, 3), stride=(1, 1))
+          (dropout): Dropout2d(p=0.5, inplace=False)
+        )
+      )
+    )
+  )
+  (conv2): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+  (conv3): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(64, 32, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+  (conv4): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+  (conv5): ConvLayer(
+    (reflection_pad): ReflectionPad2d((1, 1, 1, 1))
+    (conv2d): Conv2d(16, 1, kernel_size=(3, 3), stride=(1, 1))
+    (dropout): Dropout2d(p=0.5, inplace=False)
+  )
+)
+  0%|          | 0/40 [00:00<?, ?it/s]Start training.....
+Epoch 0.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+
+best, loss : 10237
+Tue Jan 10 12:22:53 2023	Epoch 1:	[5/460]	 pixel loss: 16491.969128	 ssim loss: 1.805712	 total: 18297.681185:   0%|          | 0/40 [00:05<?, ?it/s]
+best, loss : 8369
+Tue Jan 10 12:23:05 2023	Epoch 1:	[20/460]	 pixel loss: 14308.884903	 ssim loss: 1.677360	 total: 15986.245056:   0%|          | 0/40 [00:18<?, ?it/s]
+best, loss : 6965
+Tue Jan 10 12:23:27 2023	Epoch 1:	[40/460]	 pixel loss: 8180.456049	 ssim loss: 0.877380	 total: 9057.835645:   0%|          | 0/40 [00:40<?, ?it/s]  
+best, loss : 3869
+
+best, loss : 3789
+
+best, loss : 3598
+
+best, loss : 3243
+Tue Jan 10 12:23:31 2023	Epoch 1:	[45/460]	 pixel loss: 2730.317404	 ssim loss: 0.399402	 total: 3129.718914:   0%|          | 0/40 [00:43<?, ?it/s]
+best, loss : 2404
+
+best, loss : 1831
+
+best, loss : 1576
+Tue Jan 10 12:23:41 2023	Epoch 1:	[60/460]	 pixel loss: 2842.303748	 ssim loss: 0.457630	 total: 3299.933762:   0%|          | 0/40 [00:53<?, ?it/s]
+best, loss : 1277
+
+best, loss : 977
+Tue Jan 10 12:23:58 2023	Epoch 1:	[85/460]	 pixel loss: 1566.507432	 ssim loss: 0.301961	 total: 1868.468723:   0%|          | 0/40 [01:11<?, ?it/s]
+best, loss : 955
+Tue Jan 10 12:24:55 2023	Epoch 1:	[150/460]	 pixel loss: 1416.831519	 ssim loss: 0.278013	 total: 1694.844784:   0%|          | 0/40 [02:07<?, ?it/s]
+best, loss : 807
+Tue Jan 10 12:25:35 2023	Epoch 1:	[195/460]	 pixel loss: 1810.865225	 ssim loss: 0.354054	 total: 2164.919557:   0%|          | 0/40 [02:47<?, ?it/s]
+best, loss : 771
+Tue Jan 10 12:25:38 2023	Epoch 1:	[200/460]	 pixel loss: 1908.868814	 ssim loss: 0.353265	 total: 2262.133515:   0%|          | 0/40 [02:51<?, ?it/s]
+best, loss : 763
+Tue Jan 10 12:26:24 2023	Epoch 1:	[260/460]	 pixel loss: 1288.359576	 ssim loss: 0.244547	 total: 1532.906300:   0%|          | 0/40 [03:36<?, ?it/s]
+best, loss : 760
+Tue Jan 10 12:26:31 2023	Epoch 1:	[270/460]	 pixel loss: 1842.415253	 ssim loss: 0.418612	 total: 2261.027161:   0%|          | 0/40 [03:43<?, ?it/s]
+best, loss : 716
+Tue Jan 10 12:26:49 2023	Epoch 1:	[290/460]	 pixel loss: 1557.139954	 ssim loss: 0.297866	 total: 1855.005869:   0%|          | 0/40 [04:01<?, ?it/s]
+best, loss : 547
+Tue Jan 10 12:28:09 2023	Epoch 1:	[395/460]	 pixel loss: 1998.537218	 ssim loss: 0.343058	 total: 2341.594802:   0%|          | 0/40 [05:21<?, ?it/s]
+best, loss : 537
+Tue Jan 10 12:29:07 2023	Epoch 1:	[460/460]	 pixel loss: 1813.739687	 ssim loss: 0.244986	 total: 2058.726125:   2%|▎         | 1/40 [06:20<4:07:05, 380.13s/it]Epoch 1.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 12:31:34 2023	Epoch 2:	[185/460]	 pixel loss: 1381.601242	 ssim loss: 0.234191	 total: 1615.792612:   2%|▎         | 1/40 [08:47<4:07:05, 380.13s/it]
+best, loss : 530
+
+best, loss : 460
+Tue Jan 10 12:32:59 2023	Epoch 2:	[295/460]	 pixel loss: 1233.835487	 ssim loss: 0.196854	 total: 1430.689685:   2%|▎         | 1/40 [10:11<4:07:05, 380.13s/it]
+best, loss : 390
+Tue Jan 10 12:33:51 2023	Epoch 2:	[360/460]	 pixel loss: 1581.362784	 ssim loss: 0.266136	 total: 1847.499132:   2%|▎         | 1/40 [11:04<4:07:05, 380.13s/it]
+best, loss : 277
+Tue Jan 10 12:35:13 2023	Epoch 2:	[460/460]	 pixel loss: 2104.989932	 ssim loss: 0.331166	 total: 2436.155449:   5%|▌         | 2/40 [12:25<3:55:22, 371.63s/it]Epoch 2.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 12:37:33 2023	Epoch 3:	[170/460]	 pixel loss: 1448.597174	 ssim loss: 0.199883	 total: 1648.480444:   5%|▌         | 2/40 [14:45<3:55:22, 371.63s/it]
+best, loss : 194
+Tue Jan 10 12:41:18 2023	Epoch 3:	[460/460]	 pixel loss: 1854.477240	 ssim loss: 0.270285	 total: 2124.762429:   8%|▊         | 3/40 [18:30<3:47:15, 368.53s/it]Epoch 3.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 12:47:20 2023	Epoch 4:	[460/460]	 pixel loss: 1055.141898	 ssim loss: 0.221106	 total: 1276.247843:  10%|█         | 4/40 [24:33<3:39:43, 366.22s/it]Epoch 4.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 12:53:22 2023	Epoch 5:	[460/460]	 pixel loss: 1212.210654	 ssim loss: 0.158876	 total: 1371.087037:  12%|█▎        | 5/40 [30:35<3:32:45, 364.73s/it]Epoch 5.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 12:58:34 2023	Epoch 6:	[395/460]	 pixel loss: 1251.830624	 ssim loss: 0.184496	 total: 1436.326693:  12%|█▎        | 5/40 [35:47<3:32:45, 364.73s/it]
+best, loss : 187
+Tue Jan 10 12:59:27 2023	Epoch 6:	[460/460]	 pixel loss: 879.243285	 ssim loss: 0.186401	 total: 1065.644366:  15%|█▌        | 6/40 [36:39<3:26:34, 364.53s/it] Epoch 6.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:05:30 2023	Epoch 7:	[460/460]	 pixel loss: 1396.612645	 ssim loss: 0.201335	 total: 1597.947741:  18%|█▊        | 7/40 [42:43<3:20:18, 364.20s/it]Epoch 7.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:11:32 2023	Epoch 8:	[460/460]	 pixel loss: 1575.441985	 ssim loss: 0.247533	 total: 1822.974841:  20%|██        | 8/40 [48:45<3:13:54, 363.59s/it]Epoch 8.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:16:20 2023	Epoch 9:	[365/460]	 pixel loss: 1426.752042	 ssim loss: 0.232453	 total: 1659.205269:  20%|██        | 8/40 [53:32<3:13:54, 363.59s/it]
+best, loss : 171
+Tue Jan 10 13:17:36 2023	Epoch 9:	[460/460]	 pixel loss: 2290.956715	 ssim loss: 0.366517	 total: 2657.473615:  22%|██▎       | 9/40 [54:49<3:07:55, 363.73s/it]Epoch 9.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:23:38 2023	Epoch 10:	[460/460]	 pixel loss: 1406.841710	 ssim loss: 0.219783	 total: 1626.624944:  25%|██▌       | 10/40 [1:00:51<3:01:35, 363.20s/it]Epoch 10.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:29:14 2023	Epoch 11:	[430/460]	 pixel loss: 1285.797321	 ssim loss: 0.165513	 total: 1451.310466:  25%|██▌       | 10/40 [1:06:26<3:01:35, 363.20s/it]
+best, loss : 155
+Tue Jan 10 13:29:42 2023	Epoch 11:	[460/460]	 pixel loss: 779.349600	 ssim loss: 0.187389	 total: 966.738330:  28%|██▊       | 11/40 [1:06:54<2:55:33, 363.24s/it]  Epoch 11.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:35:46 2023	Epoch 12:	[460/460]	 pixel loss: 903.353188	 ssim loss: 0.218399	 total: 1121.752092:  30%|███       | 12/40 [1:12:58<2:49:35, 363.42s/it] Epoch 12.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:41:46 2023	Epoch 13:	[460/460]	 pixel loss: 2106.133383	 ssim loss: 0.327072	 total: 2433.204919:  32%|███▎      | 13/40 [1:18:59<2:43:08, 362.53s/it]Epoch 13.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:47:49 2023	Epoch 14:	[460/460]	 pixel loss: 1131.597406	 ssim loss: 0.142666	 total: 1274.263400:  35%|███▌      | 14/40 [1:25:02<2:37:11, 362.75s/it]Epoch 14.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:53:53 2023	Epoch 15:	[460/460]	 pixel loss: 1392.078888	 ssim loss: 0.297839	 total: 1689.917480:  38%|███▊      | 15/40 [1:31:06<2:31:17, 363.09s/it]Epoch 15.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 13:54:33 2023	Epoch 16:	[50/460]	 pixel loss: 1060.741659	 ssim loss: 0.186547	 total: 1247.288295:  38%|███▊      | 15/40 [1:31:45<2:31:17, 363.09s/it] 
+best, loss : 150
+Tue Jan 10 13:59:57 2023	Epoch 16:	[460/460]	 pixel loss: 1270.276947	 ssim loss: 0.252134	 total: 1522.410591:  40%|████      | 16/40 [1:37:09<2:25:18, 363.28s/it]Epoch 16.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:06:00 2023	Epoch 17:	[460/460]	 pixel loss: 1066.074106	 ssim loss: 0.215517	 total: 1281.590816:  42%|████▎     | 17/40 [1:43:12<2:19:13, 363.18s/it]Epoch 17.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:12:02 2023	Epoch 18:	[460/460]	 pixel loss: 1396.993800	 ssim loss: 0.181381	 total: 1578.374871:  45%|████▌     | 18/40 [1:49:15<2:13:05, 362.98s/it]Epoch 18.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:18:04 2023	Epoch 19:	[460/460]	 pixel loss: 1307.904597	 ssim loss: 0.229282	 total: 1537.186738:  48%|████▊     | 19/40 [1:55:17<2:06:54, 362.59s/it]Epoch 19.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:24:06 2023	Epoch 20:	[460/460]	 pixel loss: 861.917558	 ssim loss: 0.153008	 total: 1014.926043:  50%|█████     | 20/40 [2:01:19<2:00:50, 362.51s/it] Epoch 20.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:30:08 2023	Epoch 21:	[460/460]	 pixel loss: 1528.019743	 ssim loss: 0.239969	 total: 1767.988758:  52%|█████▎    | 21/40 [2:07:20<1:54:42, 362.23s/it]Epoch 21.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:36:10 2023	Epoch 22:	[460/460]	 pixel loss: 1166.742871	 ssim loss: 0.226975	 total: 1393.717585:  55%|█████▌    | 22/40 [2:13:23<1:48:41, 362.32s/it]Epoch 22.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:42:13 2023	Epoch 23:	[460/460]	 pixel loss: 1693.258105	 ssim loss: 0.270498	 total: 1963.756179:  57%|█████▊    | 23/40 [2:19:25<1:42:39, 362.32s/it]Epoch 23.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:47:23 2023	Epoch 24:	[390/460]	 pixel loss: 1411.499527	 ssim loss: 0.212231	 total: 1623.730102:  57%|█████▊    | 23/40 [2:24:35<1:42:39, 362.32s/it]
+best, loss : 147
+Tue Jan 10 14:48:17 2023	Epoch 24:	[460/460]	 pixel loss: 1087.354099	 ssim loss: 0.148577	 total: 1235.931145:  60%|██████    | 24/40 [2:25:30<1:36:48, 363.02s/it]Epoch 24.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 14:54:21 2023	Epoch 25:	[460/460]	 pixel loss: 1067.513939	 ssim loss: 0.243846	 total: 1311.359807:  62%|██████▎   | 25/40 [2:31:34<1:30:48, 363.26s/it]Epoch 25.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:00:21 2023	Epoch 26:	[455/460]	 pixel loss: 912.080717	 ssim loss: 0.150892	 total: 1062.972582:  62%|██████▎   | 25/40 [2:37:33<1:30:48, 363.26s/it] 
+best, loss : 145
+Tue Jan 10 15:00:26 2023	Epoch 26:	[460/460]	 pixel loss: 1199.565274	 ssim loss: 0.180845	 total: 1380.409784:  65%|██████▌   | 26/40 [2:37:38<1:24:50, 363.60s/it]Epoch 26.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:06:28 2023	Epoch 27:	[460/460]	 pixel loss: 1155.304683	 ssim loss: 0.183038	 total: 1338.342500:  68%|██████▊   | 27/40 [2:43:40<1:18:41, 363.21s/it]Epoch 27.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:12:36 2023	Epoch 28:	[460/460]	 pixel loss: 1139.531700	 ssim loss: 0.184546	 total: 1324.078099:  70%|███████   | 28/40 [2:49:49<1:12:56, 364.67s/it]Epoch 28.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:18:46 2023	Epoch 29:	[460/460]	 pixel loss: 1153.390709	 ssim loss: 0.209437	 total: 1362.828055:  72%|███████▎  | 29/40 [2:55:58<1:07:08, 366.23s/it]Epoch 29.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:24:53 2023	Epoch 30:	[460/460]	 pixel loss: 1334.654228	 ssim loss: 0.177470	 total: 1512.124161:  75%|███████▌  | 30/40 [3:02:06<1:01:05, 366.53s/it]Epoch 30.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:30:59 2023	Epoch 31:	[460/460]	 pixel loss: 1574.409146	 ssim loss: 0.174520	 total: 1748.928911:  78%|███████▊  | 31/40 [3:08:11<54:56, 366.30s/it]  Epoch 31.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:34:01 2023	Epoch 32:	[230/460]	 pixel loss: 1358.612192	 ssim loss: 0.268435	 total: 1627.047658:  78%|███████▊  | 31/40 [3:11:14<54:56, 366.30s/it]
+best, loss : 144
+Tue Jan 10 15:37:15 2023	Epoch 32:	[460/460]	 pixel loss: 1486.729736	 ssim loss: 0.239994	 total: 1726.723845:  80%|████████  | 32/40 [3:14:27<49:13, 369.20s/it]Epoch 32.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:43:24 2023	Epoch 33:	[460/460]	 pixel loss: 1494.328036	 ssim loss: 0.252565	 total: 1746.892681:  82%|████████▎ | 33/40 [3:20:37<43:04, 369.25s/it]Epoch 33.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:49:33 2023	Epoch 34:	[460/460]	 pixel loss: 1090.635757	 ssim loss: 0.219125	 total: 1309.760683:  85%|████████▌ | 34/40 [3:26:46<36:54, 369.10s/it]Epoch 34.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 15:55:42 2023	Epoch 35:	[460/460]	 pixel loss: 1258.824698	 ssim loss: 0.216375	 total: 1475.199787:  88%|████████▊ | 35/40 [3:32:54<30:44, 368.93s/it]Epoch 35.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 16:01:48 2023	Epoch 36:	[460/460]	 pixel loss: 1139.883705	 ssim loss: 0.197828	 total: 1337.711223:  90%|█████████ | 36/40 [3:39:01<24:33, 368.29s/it]Epoch 36.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 16:07:54 2023	Epoch 37:	[460/460]	 pixel loss: 1193.858286	 ssim loss: 0.172037	 total: 1365.894969:  92%|█████████▎| 37/40 [3:45:06<18:22, 367.44s/it]Epoch 37.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 16:09:06 2023	Epoch 38:	[90/460]	 pixel loss: 782.191381	 ssim loss: 0.128136	 total: 910.327670:  92%|█████████▎| 37/40 [3:46:19<18:22, 367.44s/it]   
+best, loss : 143
+Tue Jan 10 16:14:00 2023	Epoch 38:	[460/460]	 pixel loss: 1646.067270	 ssim loss: 0.219163	 total: 1865.230747:  95%|█████████▌| 38/40 [3:51:12<12:14, 367.05s/it]Epoch 38.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 16:20:08 2023	Epoch 39:	[460/460]	 pixel loss: 1623.858557	 ssim loss: 0.242829	 total: 1866.687642:  98%|█████████▊| 39/40 [3:57:20<06:07, 367.22s/it]Epoch 39.....
+BATCH SIZE 1.
+Train images number 460.
+Train images samples 460.0.
+Tue Jan 10 16:26:12 2023	Epoch 40:	[460/460]	 pixel loss: 1703.285909	 ssim loss: 0.313654	 total: 2016.940379: 100%|██████████| 40/40 [4:03:25<00:00, 365.13s/it]
+Done, trained model saved at models\1e3/Final_epoch_40_Tue_Jan_10_16_26_12_2023_1e3.model
